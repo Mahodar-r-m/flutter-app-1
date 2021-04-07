@@ -1,0 +1,24 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_login_signup/bootscreen.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        textTheme: GoogleFonts.workSansTextTheme(textTheme).copyWith(
+          bodyText1: GoogleFonts.workSans(textStyle: textTheme.bodyText1),
+        ),
+      ),
+      debugShowCheckedModeBanner: false,
+      home: Boot(),
+    );
+  }
+}
